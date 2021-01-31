@@ -1,0 +1,2 @@
+/system script remove func_formatDateTime;
+/system script add name="func_formatDateTime" policy=read comment="Function: func_formatDateTime" source=":local getCurrentDateTime [:parse [/system script get func_getCurrentDateTime source]];\n:local dateTime [\$getCurrentDateTime];\n:return ((\$dateTime->\"year\") . \"-\" . (\$dateTime->\"mm\") . \"-\" . (\$dateTime->\"day\") . \" @ \" . (\$dateTime->\"hh\") . \":\" . (\$dateTime->\"minute\") . \":\" . (\$dateTime->\"second\") . \" \" . (\$dateTime->\"meridiem\"));"
